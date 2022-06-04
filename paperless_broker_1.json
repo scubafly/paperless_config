@@ -1,0 +1,57 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "redis-server",
+   "cpu_priority" : 0,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : true,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "GOSU_VERSION",
+         "value" : "1.12"
+      },
+      {
+         "key" : "REDIS_VERSION",
+         "value" : "6.0.10"
+      },
+      {
+         "key" : "REDIS_DOWNLOAD_URL",
+         "value" : "http://download.redis.io/releases/redis-6.0.10.tar.gz"
+      },
+      {
+         "key" : "REDIS_DOWNLOAD_SHA",
+         "value" : "79bbb894f9dceb33ca699ee3ca4a4e1228be7fb5547aeb2f99d921e86c1285bd"
+      }
+   ],
+   "exporting" : false,
+   "id" : "f936f3155166562aae9099d388141a3e975f1341433d63238fc18bcec05f5e8f",
+   "image" : "redis:6.0",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "paperless_broker_1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "paperless_default"
+      }
+   ],
+   "network_mode" : "paperless_default",
+   "port_bindings" : [],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "volume_bindings" : []
+}

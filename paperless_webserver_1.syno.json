@@ -1,0 +1,112 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "/usr/local/bin/supervisord -c /etc/supervisord.conf",
+   "cpu_priority" : 0,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : true,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+      },
+      {
+         "key" : "LANG",
+         "value" : "C.UTF-8"
+      },
+      {
+         "key" : "GPG_KEY",
+         "value" : "0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D"
+      },
+      {
+         "key" : "PYTHON_VERSION",
+         "value" : "3.7.9"
+      },
+      {
+         "key" : "PYTHON_PIP_VERSION",
+         "value" : "21.0.1"
+      },
+      {
+         "key" : "PYTHON_GET_PIP_URL",
+         "value" : "https://github.com/pypa/get-pip/raw/4be3fe44ad9dedc028629ed1497052d65d281b8e/get-pip.py"
+      },
+      {
+         "key" : "PYTHON_GET_PIP_SHA256",
+         "value" : "8006625804f55e1bd99ad4214fd07082fee27a1c35945648a58f9087a714e9d4"
+      },
+      {
+         "key" : "PAPERLESS_OCR_LANGUAGES",
+         "value" : "nld"
+      },
+      {
+         "key" : "PAPERLESS_TIME_ZONE",
+         "value" : "Europe/Amsterdam"
+      },
+      {
+         "key" : "PAPERLESS_OCR_LANGUAGE",
+         "value" : "nld"
+      },
+      {
+         "key" : "PAPERLESS_REDIS",
+         "value" : "redis://broker:6379"
+      },
+      {
+         "key" : "PAPERLESS_DBHOST",
+         "value" : "db"
+      }
+   ],
+   "exporting" : false,
+   "id" : "eebbe77e6d10bcdb48b2bdcf06b1839b4a892cbfbd15a5fa3149f6da3cfc90ac",
+   "image" : "jonaswinkler/paperless-ng:latest",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "paperless_webserver_1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "paperless_default"
+      }
+   ],
+   "network_mode" : "paperless_default",
+   "port_bindings" : [
+      {
+         "container_port" : 8000,
+         "host_port" : 8000,
+         "type" : "tcp"
+      }
+   ],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/SmartHome/paperless/data",
+         "mount_point" : "/usr/src/paperless/data",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/SmartHome/paperless/media",
+         "mount_point" : "/usr/src/paperless/media",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/SmartHome/paperless/consume",
+         "mount_point" : "/usr/src/paperless/consume",
+         "type" : "rw"
+      },
+      {
+         "host_volume_file" : "/SmartHome/paperless/export",
+         "mount_point" : "/usr/src/paperless/export",
+         "type" : "rw"
+      }
+   ]
+}

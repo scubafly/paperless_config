@@ -1,0 +1,79 @@
+{
+   "cap_add" : null,
+   "cap_drop" : null,
+   "cmd" : "postgres",
+   "cpu_priority" : 0,
+   "devices" : null,
+   "enable_publish_all_ports" : false,
+   "enable_restart_policy" : false,
+   "enabled" : true,
+   "env_variables" : [
+      {
+         "key" : "PATH",
+         "value" : "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin"
+      },
+      {
+         "key" : "GOSU_VERSION",
+         "value" : "1.12"
+      },
+      {
+         "key" : "LANG",
+         "value" : "en_US.utf8"
+      },
+      {
+         "key" : "PG_MAJOR",
+         "value" : "13"
+      },
+      {
+         "key" : "PG_VERSION",
+         "value" : "13.1-1.pgdg100+1"
+      },
+      {
+         "key" : "PGDATA",
+         "value" : "/var/lib/postgresql/data"
+      },
+      {
+         "key" : "POSTGRES_DB",
+         "value" : "paperless"
+      },
+      {
+         "key" : "POSTGRES_USER",
+         "value" : "paperless"
+      },
+      {
+         "key" : "POSTGRES_PASSWORD",
+         "value" : "paperless"
+      }
+   ],
+   "exporting" : false,
+   "id" : "c11923dbe2366143b70f74db2892435c776d03b30e5df3109a5f9807d45a1f16",
+   "image" : "postgres:13",
+   "is_ddsm" : false,
+   "is_package" : false,
+   "links" : [],
+   "memory_limit" : 0,
+   "name" : "paperless_db_1",
+   "network" : [
+      {
+         "driver" : "bridge",
+         "name" : "paperless_default"
+      }
+   ],
+   "network_mode" : "paperless_default",
+   "port_bindings" : [],
+   "privileged" : false,
+   "shortcut" : {
+      "enable_shortcut" : false,
+      "enable_status_page" : false,
+      "enable_web_page" : false,
+      "web_page_url" : ""
+   },
+   "use_host_network" : false,
+   "volume_bindings" : [
+      {
+         "host_volume_file" : "/SmartHome/paperless/database",
+         "mount_point" : "/var/lib/postgresql/data",
+         "type" : "rw"
+      }
+   ]
+}
